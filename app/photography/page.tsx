@@ -1,31 +1,21 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 
-import chicago1 from "./chicago1.jpg";
-import chicago2 from "./chicago2.jpg";
-import chicago3 from "./chicago3.jpg";
-import chicago4 from "./chicago4.jpg";
-import chicago5 from "./chicago5.jpg";
-import florida1 from "./florida1.jpg";
-import florida2 from "./florida2.jpg";
-import florida3 from "./florida3.jpg";
-import nyc1 from "./nyc1.jpg";
-
 export const metadata: Metadata = {
   title: "photography",
   description: "pictures taken by a person named josh",
 };
 
 const pics = [
-  { src: chicago1, alt: "Chicago" },
-  { src: chicago2, alt: "Chicago" },
-  { src: chicago3, alt: "Chicago" },
-  { src: chicago4, alt: "Chicago" },
-  { src: chicago5, alt: "Chicago" },
-  { src: florida1, alt: "Florida" },
-  { src: florida2, alt: "Florida" },
-  { src: florida3, alt: "Florida" },
-  { src: nyc1, alt: "NYC" },
+  { src: "/chicago1.jpg", alt: "Chicago", width: 2383, height: 3575 },
+  { src: "/chicago2.jpg", alt: "Chicago", width: 3988, height: 2659 },
+  { src: "/chicago3.jpg", alt: "Chicago", width: 3813, height: 5720 },
+  { src: "/chicago4.jpg", alt: "Chicago", width: 4309, height: 2873 },
+  { src: "/chicago5.jpg", alt: "Chicago", width: 3397, height: 5095 },
+  { src: "/florida1.jpg", alt: "Florida", width: 3697, height: 4929 },
+  { src: "/florida2.jpg", alt: "Florida", width: 4000, height: 6000 },
+  { src: "/florida3.jpg", alt: "Florida", width: 5356, height: 3570 },
+  { src: "/nyc1.jpg", alt: "NYC", width: 5922, height: 3947 },
 ];
 
 export default function Photography() {
@@ -38,6 +28,8 @@ export default function Photography() {
             <Image
               src={pic.src}
               alt={pic.alt}
+              width={pic.width}
+              height={pic.height}
               sizes="100vw"
               className="w-full h-auto"
             />
