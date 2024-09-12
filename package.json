@@ -1,7 +1,12 @@
 {
   "name": "heyjosh",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "portfolio + writings by a person named josh",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ohheyjosh/heyjosh.git"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
