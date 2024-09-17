@@ -23,31 +23,31 @@ export default function Photography() {
       <main className="row-start-2">
         <ul role="list" className="flex flex-1 flex-col space-y-6 sm:px-16">
           <li className="w-full h-auto">
-            <Image src={nyc1} alt={"NYC"} />
+            <Image src={nyc1} alt={"NYC"} sizes="100vw" placeholder="blur" />
           </li>
           <li className="w-full h-auto">
-            <Image src={chicago1} alt={"Chicago"} placeholder="blur" />
+            <Image src={chicago1} alt={"Chicago"} sizes="100vw" placeholder="blur" />
           </li>
           <li className="w-full h-auto">
-            <Image src={chicago2} alt={"Chicago"} placeholder="blur" />
+            <Image src={chicago2} alt={"Chicago"} sizes="100vw" placeholder="blur" />
           </li>
           <li className="w-full h-auto">
-            <Image src={chicago3} alt={"Chicago"} placeholder="blur" />
+            <Image src={chicago3} alt={"Chicago"} sizes="100vw" placeholder="blur" />
           </li>
           <li className="w-full h-auto">
-            <Image src={chicago4} alt={"Chicago"} placeholder="blur" />
+            <Image src={chicago4} alt={"Chicago"} sizes="100vw" placeholder="blur" />
           </li>
           <li className="w-full h-auto">
-            <Image src={chicago5} alt={"Chicago"} placeholder="blur" />
+            <Image src={chicago5} alt={"Chicago"} sizes="100vw" placeholder="blur" />
           </li>
           <li className="w-full h-auto">
-            <Image src={florida1} alt={"Florida"} placeholder="blur" />
+            <Image src={florida1} alt={"Florida"} sizes="100vw" placeholder="blur" />
           </li>
           <li className="w-full h-auto">
-            <Image src={florida2} alt={"Florida"} placeholder="blur" />
+            <Image src={florida2} alt={"Florida"} sizes="100vw" placeholder="blur" />
           </li>
           <li className="w-full h-auto">
-            <Image src={florida3} alt={"Florida"} placeholder="blur" />
+            <Image src={florida3} alt={"Florida"} sizes="100vw" placeholder="blur" />
           </li>
         </ul>
       </main>
