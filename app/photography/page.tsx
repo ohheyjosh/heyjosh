@@ -26,28 +26,28 @@ export default function Photography() {
             <Image src={nyc1} alt={"NYC"} />
           </li>
           <li className="w-full h-auto">
-            <Image src={chicago1} alt={"Chicago"} />
+            <Image src={chicago1} alt={"Chicago"} placeholder="blur" />
           </li>
           <li className="w-full h-auto">
-            <Image src={chicago2} alt={"Chicago"} />
+            <Image src={chicago2} alt={"Chicago"} placeholder="blur" />
           </li>
           <li className="w-full h-auto">
-            <Image src={chicago3} alt={"Chicago"} />
+            <Image src={chicago3} alt={"Chicago"} placeholder="blur" />
           </li>
           <li className="w-full h-auto">
-            <Image src={chicago4} alt={"Chicago"} />
+            <Image src={chicago4} alt={"Chicago"} placeholder="blur" />
           </li>
           <li className="w-full h-auto">
-            <Image src={chicago5} alt={"Chicago"} />
+            <Image src={chicago5} alt={"Chicago"} placeholder="blur" />
           </li>
           <li className="w-full h-auto">
-            <Image src={florida1} alt={"Florida"} />
+            <Image src={florida1} alt={"Florida"} placeholder="blur" />
           </li>
           <li className="w-full h-auto">
-            <Image src={florida2} alt={"Florida"} />
+            <Image src={florida2} alt={"Florida"} placeholder="blur" />
           </li>
           <li className="w-full h-auto">
-            <Image src={florida3} alt={"Florida"} />
+            <Image src={florida3} alt={"Florida"} placeholder="blur" />
           </li>
         </ul>
       </main>
