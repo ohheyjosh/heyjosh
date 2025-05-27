@@ -1,0 +1,32 @@
+---
+const navigation = [
+  { name: "photography", href: "/photography" },
+  {
+    name: "isthisaleapyear.com",
+    href: "https://www.isthisaleapyear.com/",
+    target: "_blank",
+  },
+  {
+    name: "wordle wizard",
+    href: "https://wordle-wizard.netlify.app",
+    target: "_blank",
+  },
+  { name: "github", href: "https://github.com/ohheyjosh", target: "_blank" },
+];
+---
+
+<nav class="flex flex-1 flex-col">
+  <ul role="list" class="-mx-2 space-y-1">
+    {navigation.map((item) => (
+      <li>
+        <a
+          class="text-gray-50 hover:bg-gray-50 hover:text-gray-700 group flex gap-x-3 rounded-md p-2 pl-3 text-lg leading-6"
+          href={item.href}
+          target={item.target}
+        >
+          {item.name}
+        </a>
+      </li>
+    ))}
+  </ul>
+</nav>
