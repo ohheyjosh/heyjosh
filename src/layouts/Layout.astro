@@ -1,0 +1,31 @@
+---
+import '@fontsource/geist-sans/200.css';
+import '../globals.css';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>{title}</title>
+    <meta name="description" content={description}>
+  </head>
+  <body class="grid grid-rows-[0px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 sm:p-20">
+    <slot />
+    {title !== 'hey josh' && <footer class="row-start-3 flex flex-wrap mt-16">
+    <a
+      href="/"
+      class="text-gray-50 hover:bg-gray-50 hover:text-gray-700 group flex gap-x-3 rounded-md p-2 pl-3 text-lg leading-6">
+      &#8249; back &nbsp;
+    </a>
+  </footer>}
+  </body>
+</html>
