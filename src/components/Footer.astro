@@ -1,0 +1,65 @@
+---
+const navigation = {
+  solutions: [
+    { name: "Tech Strategy", href: "/services/tech-strategy" },
+    { name: "Eng Team Leadership", href: "/services/eng-leadership" },
+    { name: "MVP Development", href: "/services/mvp-development" },
+  ],
+  legal: [
+    { name: "Terms of Service", href: "/terms" },
+    { name: "Privacy", href: "/privacy" },
+  ],
+};
+---
+
+<footer class="bg-gray-100 dark:bg-gray-900">
+  <div class="mt-8 pb-16 p-4 pt-8 lg:p-8">
+    <div
+      class="flex max-sm:flex-col flex-grow items-start justify-start sm:space-b-4">
+      <a href="/" class="flex sm:flex-0 min-w-40">
+        <h1 class="text-xl sm:text-2xl lg:text-3xl text-gray-950 dark:text-gray-50">hey josh</h1>
+      </a>
+      <ul
+        role="list"
+        class="flex flex-col space-y-4 max-sm:my-4 sm:flex-grow">
+        {
+          navigation.solutions.map((item) => (
+            <li>
+              <a
+                href={item.href}
+                class="text-sm sm:text-md text-gray-800 dark:text-gray-200 hover:text-gray-400">
+                {item.name}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+      <a
+        href="/contact"
+        class="rounded-md bg-orange-500 px-5 py-2.5 lg:py-3.5 text-sm font-semibold text-gray-50 shadow-xs hover:bg-orange-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500">
+        Schedule a call
+      </a>
+    </div>
+    <div
+      class="flex max-sm:flex-col max-sm:space-y-4 justify-between border-t border-white/10 pt-8 mt-16 sm:mt-20 lg:mt-24">
+      <p class="text-sm text-gray-800 dark:text-gray-200">
+        &copy; {new Date().getFullYear()} hey josh
+      </p>
+      <ul
+        role="list"
+        class="flex max-sm:flex-col max-sm:space-y-4 sm:space-x-4">
+        {
+          navigation.legal.map((item) => (
+            <li>
+              <a
+                href={item.href}
+                class="text-sm text-gray-800 dark:text-gray-200 hover:text-gray-400">
+                {item.name}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</footer>

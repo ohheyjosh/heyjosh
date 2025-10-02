@@ -1,7 +1,7 @@
 {
   "name": "heyjosh",
-  "version": "1.1.0",
-  "description": "portfolio + writings by a person named josh",
+  "version": "1.2.0",
+  "description": "homepage of a person named josh",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -15,12 +15,12 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
-    "@astrojs/solid-js": "^3.0.0",
+    "@astrojs/solid-js": "^5.1.1",
     "@astrojs/tailwind": "^6.0.2",
     "@astrojs/ts-plugin": "^1.10.4",
     "@fontsource/geist-sans": "^5.2.5",
     "@types/node": "^22.15.22",
-    "astro": "^4",
+    "astro": "^5.14.1",
     "autoprefixer": "^10.4.17",
     "eslint": "^9",
     "eslint-plugin-astro": "^0.32.0",
