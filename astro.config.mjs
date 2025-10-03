@@ -1,9 +1,10 @@
 import { defineConfig } from "astro/config";
 import solid from "@astrojs/solid-js";
-import tailwind from "@astrojs/tailwind";
+import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
-  integrations: [solid(), tailwind()],
+  integrations: [solid()],
+  vite: { plugins: [tailwindcss()] },
   output: "static",
   site: "https://heyjo.sh/",
 });
