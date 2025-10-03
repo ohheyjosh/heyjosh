@@ -1,0 +1,163 @@
+---
+import { Picture } from "astro:assets";
+import Layout from "@/layouts/Layout.astro";
+import mvpProcess from "@/images/mvp-process.png";
+import MeetJosh from "@/components/MeetJosh.astro";
+---
+
+<Layout
+  title="mvp development"
+  description="fractional engineering leader focusing on accelerating delivery, not cost">
+  <div
+    class="flex flex-col px-4 space-y-16 sm:space-y-32 items-center lg:pt-24">
+    <div class="max-w-5xl w-full px-4 lg:p-8 space-y-8">
+      <h1 class="text-3xl sm:text-5xl font-bold">
+        MVP development without the hassle
+      </h1>
+      <p class="max-w-3xl text-xl">
+        You bring the idea. I bring the tech chops.
+        <br />
+        Nobody brings the headache and cost from outsourcing agencies.
+      </p>
+      <div class="flex">
+        <a
+          href="/contact"
+          class="rounded-md bg-orange-500 px-8 py-4 lg:py-3.5 text-xl font-semibold text-gray-50 shadow-xs hover:bg-orange-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500">
+          Get started
+        </a>
+      </div>
+    </div>
+    <div class="-mx-4">
+      <div
+        class="relative isolate overflow-hidden px-4 lg:p-8 space-y-8 lg:overflow-visible lg:px-0 border-t-1 border-gray-200 dark:border-gray-800">
+        <div class="absolute inset-0 -z-10 overflow-hidden">
+          <svg
+            aria-hidden="true"
+            class="absolute top-0 left-[max(50%,25rem)] h-256 w-512 -translate-x-1/2 mask-[radial-gradient(64rem_64rem_at_top,white,transparent)] stroke-gray-200 dark:stroke-gray-800">
+            <defs>
+              <pattern
+                x="50%"
+                y={-1}
+                id="e813992c-7d03-4cc4-a2bd-151760b470a0"
+                width={200}
+                height={200}
+                patternUnits="userSpaceOnUse">
+                <path d="M100 200V.5M.5 .5H200" fill="none"></path>
+              </pattern>
+            </defs>
+            <svg
+              x="50%"
+              y="-1"
+              class="overflow-visible fill-gray-50 dark:fill-gray-800/50">
+              <path
+                d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z"
+                stroke-width="0"></path>
+            </svg>
+            <rect
+              fill="url(#e813992c-7d03-4cc4-a2bd-151760b470a0)"
+              width="100%"
+              height="100%"
+              stroke-width="0"></rect>
+          </svg>
+        </div>
+        <div
+          class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
+          <div
+            class="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
+            <div class="lg:pr-4">
+              <div class="lg:max-w-lg">
+                <h1
+                  class="mt-16 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl dark:text-white">
+                  Proven MVP approach
+                </h1>
+                <p class="mt-8 text-xl/8 text-gray-700 dark:text-gray-300">
+                  A fast, design-led process that gets usable software in front
+                  of real customers quickly—without wasting cycles on the wrong
+                  thing.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="-mt-8 -ml-8 p-8 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
+            <Picture
+              src={mvpProcess}
+              alt="MVP Development Process"
+              formats={["avif", "webp"]}
+              class="w-3xl max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-200 dark:bg-gray-800 dark:ring-white/10"
+            />
+          </div>
+          <div
+            class="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
+            <div class="lg:pr-4">
+              <p>Here’s how we move from idea to working product fast:</p>
+              <div
+                class="max-w-xl text-base/7 text-gray-600 lg:max-w-lg dark:text-gray-400">
+                <ul
+                  role="list"
+                  class="mt-8 space-y-8 text-gray-600 dark:text-gray-400">
+                  <li class="flex gap-x-3">
+                    <span
+                      aria-hidden="true"
+                      class="mt-1 size-5 flex-none text-orange-600 dark:text-orange-400"
+                      >🧭</span
+                    >
+                    <span>
+                      <strong
+                        class="font-semibold text-gray-900 dark:text-white"
+                        >User flow design (IBM Design Thinking)</strong
+                      > Map personas, needs, and flows using IBM’s Design Thinking
+                      to align the team on outcomes and success metrics before a
+                      single line of code is written.
+                    </span>
+                  </li>
+                  <li class="flex gap-x-3">
+                    <span
+                      aria-hidden="true"
+                      class="mt-1 size-5 flex-none text-orange-600 dark:text-orange-400"
+                      >✏️</span
+                    >
+                    <span>
+                      <strong
+                        class="font-semibold text-gray-900 dark:text-white"
+                        >Low‑fidelity mockups</strong
+                      > Create simple sketches and click-through wireframes to validate
+                      flows quickly and reduce rework, keeping fidelity low so we
+                      can iterate fast.
+                    </span>
+                  </li>
+                  <li class="flex gap-x-3">
+                    <span
+                      aria-hidden="true"
+                      class="mt-1 size-5 flex-none text-orange-600 dark:text-orange-400"
+                      >🔁</span
+                    >
+                    <span>
+                      <strong
+                        class="font-semibold text-gray-900 dark:text-white"
+                        >Short, design‑driven build cycles</strong
+                      > Ship in tight loops—design, build, test with real users,
+                      learn—so we prioritize what matters and deliver working software
+                      every cycle.
+                    </span>
+                  </li>
+                </ul>
+              </div>
+              <p class="mt-8 max-sm:px-4 text-base/7">
+                Result: faster feedback, less waste, and an MVP users love —
+                validated by real usage. Expect a clickable prototype in days
+                and a shippable slice in weeks, with each loop measured
+                against activation, retention, and task completion.
+                You’ll spend fewer hours on rework, protect budget, and build
+                a credible story for customers and investors.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <MeetJosh />
+    </div>
+  </div>
+</Layout>
