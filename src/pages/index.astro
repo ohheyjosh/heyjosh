@@ -1,21 +1,109 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import MeetJosh from "@/components/MeetJosh.astro";
 ---
 
 <Layout
   title="hey josh"
   description="fractional engineering leader focusing on accelerating delivery, not cost">
   <div class="flex flex-col px-4 lg:p-8 space-y-4">
-    <h1 class="text-2xl font-bold">Lorem ipsum dolor sit amet</h1>
-    <p>
-      Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-      dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-      ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    </p>
-    <p>
-      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-      dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
+    <div class="py-24 sm:pt-32">
+      <MeetJosh />
+    </div>
+    <div class="py-24 sm:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl lg:text-center">
+          <h2
+            class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl lg:text-balance dark:text-white">
+            Your part-time partner for everything tech
+          </h2>
+          <p class="mt-6 text-lg/8 text-gray-600 dark:text-gray-300">
+            From pre-launch prototyping to enterprise scaling,
+          </p>
+        </div>
+        <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+          <dl
+            class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
+            <div class="flex flex-col">
+              <dt
+                class="flex items-center gap-x-3 text-base/7 font-semibold text-gray-900 dark:text-white">
+                <span
+                  aria-hidden="true"
+                  class="-mt-2 size-6 text-2xl flex-none text-orange-600 dark:text-orange-400">
+                  <span role="img" aria-label="magnifier">🔎</span>
+                </span>
+                Tech Strategy
+              </dt>
+              <dd
+                class="mt-4 flex flex-auto flex-col text-base/7 text-gray-600 dark:text-gray-400">
+                <p class="flex-auto">
+                  You focus on running your business. I’ll focus on the tech
+                  stuff. Stack analysis, architecture planning, and long-term
+                  strategy — all delivered on your terms.
+                </p>
+                <p class="mt-6">
+                  <a
+                    href="/services/tech-strategy"
+                    class="text-sm/6 font-semibold text-orange-600 hover:text-orange-500 dark:text-orange-400 dark:hover:text-orange-300"
+                    >Learn more <span aria-hidden="true">→</span></a
+                  >
+                </p>
+              </dd>
+            </div>
+            <div class="flex flex-col">
+              <dt
+                class="flex items-center gap-x-3 text-base/7 font-semibold text-gray-900 dark:text-white">
+                <span
+                  aria-hidden="true"
+                  class="-mt-2 size-6 text-2xl flex-none text-orange-600 dark:text-orange-400">
+                  <span role="img" aria-label="team">👥</span>
+                </span>
+                Eng Team Leadership
+              </dt>
+              <dd
+                class="mt-4 flex flex-auto flex-col text-base/7 text-gray-600 dark:text-gray-400">
+                <p class="flex-auto">
+                  Every tech team needs engineering direction. Some tech teams
+                  need to budget for a full-time engineering director. The other
+                  teams should reach out to me.
+                </p>
+                <p class="mt-6">
+                  <a
+                    href="/services/eng-leadership"
+                    class="text-sm/6 font-semibold text-orange-600 hover:text-orange-500 dark:text-orange-400 dark:hover:text-orange-300"
+                    >Learn more <span aria-hidden="true">→</span></a
+                  >
+                </p>
+              </dd>
+            </div>
+            <div class="flex flex-col">
+              <dt
+                class="flex items-center gap-x-3 text-base/7 font-semibold text-gray-900 dark:text-white">
+                <span
+                  aria-hidden="true"
+                  class="-mt-2 size-6 text-2xl flex-none text-orange-600 dark:text-orange-400">
+                  <span role="img" aria-label="hammer-and-wrench">🛠️</span>
+                </span>
+                MVP Development
+              </dt>
+              <dd
+                class="mt-4 flex flex-auto flex-col text-base/7 text-gray-600 dark:text-gray-400">
+                <p class="flex-auto">
+                  You bring the idea. I bring the tech chops. Nobody brings the
+                  headache and cost from outsourcing agencies.
+                </p>
+                <p class="mt-6">
+                  <a
+                    href="/services/mvp-development"
+                    class="text-sm/6 font-semibold text-orange-600 hover:text-orange-500 dark:text-orange-400 dark:hover:text-orange-300"
+                    >Learn more <span aria-hidden="true">→</span></a
+                  >
+                </p>
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
   </div>
 </Layout>
