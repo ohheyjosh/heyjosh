@@ -1,0 +1,111 @@
+---
+import Layout from "@/layouts/Layout.astro";
+---
+
+<Layout
+  title="contact"
+  description="fractional engineering leader focusing on accelerating delivery, not cost">
+  <div class="flex flex-col px-4 space-y-4 items-center lg:py-24">
+    <h1
+      class="text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl dark:text-white">
+      Contact Josh
+    </h1>
+    <p class="mt-2 text-lg/8 text-gray-600 dark:text-gray-400">
+      Tell me about your project and we&rsquo;ll schedule a free consultation.
+    </p>
+    <form
+      action="/thanks"
+      method="POST"
+      data-netlify="true"
+      class="mx-auto max-w-xl w-96 mt-8 sm:mt-16">
+      <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+        <div class="sm:col-span-2">
+          <label
+            for="name"
+            class="block text-sm/6 font-semibold text-gray-900 dark:text-white">
+            Name
+          </label>
+          <div class="mt-2.5">
+            <input
+              id="name"
+              type="text"
+              name="name"
+              autocomplete="name"
+              class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-orange-600 dark:bg-white/5 dark:text-white dark:outline-white/10 dark:placeholder:text-gray-500 dark:focus:outline-orange-500"
+            />
+          </div>
+        </div>
+        <div class="sm:col-span-2">
+          <label
+            for="company"
+            class="block text-sm/6 font-semibold text-gray-900 dark:text-white">
+            Company
+          </label>
+          <div class="mt-2.5">
+            <input
+              id="company"
+              type="text"
+              name="company"
+              autocomplete="organization"
+              class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-orange-600 dark:bg-white/5 dark:text-white dark:outline-white/10 dark:placeholder:text-gray-500 dark:focus:outline-orange-500"
+            />
+          </div>
+        </div>
+        <div class="sm:col-span-2">
+          <label
+            for="email"
+            class="block text-sm/6 font-semibold text-gray-900 dark:text-white">
+            Email address
+          </label>
+          <div class="mt-2.5">
+            <input
+              id="email"
+              type="email"
+              name="email"
+              autocomplete="email"
+              class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-orange-600 dark:bg-white/5 dark:text-white dark:outline-white/10 dark:placeholder:text-gray-500 dark:focus:outline-orange-500"
+            />
+          </div>
+        </div>
+        <div class="sm:col-span-2">
+          <label
+            for="phone-number"
+            class="block text-sm/6 font-semibold text-gray-900 dark:text-white">
+            Phone number
+          </label>
+          <div class="mt-2.5">
+            <input
+              id="phone-number"
+              type="text"
+              name="phone-number"
+              autocomplete="tel"
+              class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-orange-600 dark:bg-white/5 dark:text-white dark:outline-white/10 dark:placeholder:text-gray-500 dark:focus:outline-orange-500"
+            />
+          </div>
+        </div>
+        <div class="sm:col-span-2">
+          <label
+            for="message"
+            class="block text-sm/6 font-semibold text-gray-900 dark:text-white">
+            Message
+          </label>
+          <div class="mt-2.5">
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-orange-600 dark:bg-white/5 dark:text-white dark:outline-white/10 dark:placeholder:text-gray-500 dark:focus:outline-orange-500"
+            ></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="mt-10">
+        <button
+          type="submit"
+          class="block w-full rounded-md bg-orange-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-xs hover:bg-orange-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600 dark:bg-orange-500 dark:hover:bg-orange-400 dark:focus-visible:outline-orange-500 cursor-pointer">
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+</Layout>
