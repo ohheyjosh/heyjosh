@@ -17,8 +17,15 @@ import Layout from "@/layouts/Layout.astro";
       action="/thanks"
       method="POST"
       data-netlify="true"
+      netlify-honeypot
       class="mx-auto max-w-xl w-96 mt-8 sm:mt-16">
       <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+        <p class="hidden">
+          <label>
+            Don’t fill this out if you’re human: <input name="bot-field" />
+          </label>
+        </p>
+        <input type="hidden" name="form-name" value="feedback" />
         <div class="sm:col-span-2">
           <label
             for="name"
