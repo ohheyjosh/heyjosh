@@ -37,8 +37,16 @@ import Layout from "@/layouts/Layout.astro";
               type="text"
               name="name"
               autocomplete="name"
+              required
+              aria-required="true"
               class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-orange-600 dark:bg-white/5 dark:text-white dark:outline-white/10 dark:placeholder:text-gray-500 dark:focus:outline-orange-500"
             />
+            <div
+              class="bg-red-700 sm:w-fit mt-2 px-3 py-2 rounded-sm hidden error-text">
+              <p class="text-sm text-white" aria-live="polite">
+                Please provide your name.
+              </p>
+            </div>
           </div>
         </div>
         <div class="sm:col-span-2">
@@ -53,8 +61,16 @@ import Layout from "@/layouts/Layout.astro";
               type="text"
               name="company"
               autocomplete="organization"
+              required
+              aria-required="true"
               class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-orange-600 dark:bg-white/5 dark:text-white dark:outline-white/10 dark:placeholder:text-gray-500 dark:focus:outline-orange-500"
             />
+            <div
+              class="bg-red-700 sm:w-fit mt-2 px-3 py-2 rounded-sm hidden error-text">
+              <p class="text-sm text-white" aria-live="polite">
+                Please provide the name of your organization.
+              </p>
+            </div>
           </div>
         </div>
         <div class="sm:col-span-2">
@@ -69,8 +85,16 @@ import Layout from "@/layouts/Layout.astro";
               type="email"
               name="email"
               autocomplete="email"
+              required
+              aria-required="true"
               class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-orange-600 dark:bg-white/5 dark:text-white dark:outline-white/10 dark:placeholder:text-gray-500 dark:focus:outline-orange-500"
             />
+            <div
+              class="bg-red-700 sm:w-fit mt-2 px-3 py-2 rounded-sm hidden error-text">
+              <p class="text-sm text-white" aria-live="polite">
+                Please provide a valid email address.
+              </p>
+            </div>
           </div>
         </div>
         <div class="sm:col-span-2">
@@ -85,8 +109,16 @@ import Layout from "@/layouts/Layout.astro";
               type="text"
               name="phone-number"
               autocomplete="tel"
+              required
+              aria-required="true"
               class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-orange-600 dark:bg-white/5 dark:text-white dark:outline-white/10 dark:placeholder:text-gray-500 dark:focus:outline-orange-500"
             />
+            <div
+              class="bg-red-700 sm:w-fit mt-2 px-3 py-2 rounded-sm hidden error-text">
+              <p class="text-sm text-white" aria-live="polite">
+                Please provide a valid phone number.
+              </p>
+            </div>
           </div>
         </div>
         <div class="sm:col-span-2">
@@ -100,8 +132,16 @@ import Layout from "@/layouts/Layout.astro";
               id="message"
               name="message"
               rows="4"
+              required
+              aria-required="true"
               class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-orange-600 dark:bg-white/5 dark:text-white dark:outline-white/10 dark:placeholder:text-gray-500 dark:focus:outline-orange-500"
             ></textarea>
+            <div
+              class="bg-red-700 sm:w-fit mt-2 px-3 py-2 rounded-sm hidden error-text">
+              <p class="text-sm text-white" aria-live="polite">
+                Please provide a brief description of your project.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -113,5 +153,76 @@ import Layout from "@/layouts/Layout.astro";
         </button>
       </div>
     </form>
+    <script>
+      // Simple client-side validation: show errors only after submit attempt
+      (function () {
+        const form = document.querySelector(
+          'form[action="/thanks/"]'
+        ) as HTMLFormElement | null;
+        if (!form) return;
+
+        type FormFieldElement = HTMLInputElement | HTMLTextAreaElement;
+
+        const fields = [
+          { id: "name", type: "text" },
+          { id: "company", type: "text" },
+          { id: "email", type: "email" },
+          { id: "phone-number", type: "text" },
+          { id: "message", type: "textarea" },
+        ];
+
+        function getErrorEl(input: FormFieldElement): HTMLElement | null {
+          // error element is the next sibling with class 'error-text'
+          let el = input.nextElementSibling;
+          if (
+            el &&
+            el instanceof HTMLElement &&
+            el.classList.contains("error-text")
+          ) {
+            return el;
+          }
+          return null;
+        }
+
+        function updateError(input: FormFieldElement): void {
+          const errorEl = getErrorEl(input);
+          if (!errorEl) return;
+          if (input.validity.valid) {
+            errorEl.classList.add("hidden");
+            input.removeAttribute("aria-invalid");
+          } else {
+            errorEl.classList.remove("hidden");
+            input.setAttribute("aria-invalid", "true");
+          }
+        }
+
+        // Validate on submit; prevent if any invalid
+        form.addEventListener("submit", function (e) {
+          let hasErrors = false;
+          fields.forEach(({ id }) => {
+            const input = document.getElementById(
+              id
+            ) as FormFieldElement | null;
+            if (!input) return;
+            if (!input.checkValidity()) {
+              hasErrors = true;
+            }
+            updateError(input);
+          });
+          if (hasErrors) {
+            e.preventDefault();
+          }
+        });
+
+        // Live validation as the user types or blurs
+        fields.forEach(({ id }) => {
+          const input = document.getElementById(id) as FormFieldElement | null;
+          if (!input) return;
+          const handler = () => updateError(input);
+          input.addEventListener("input", handler);
+          input.addEventListener("blur", handler);
+        });
+      })();
+    </script>
   </div>
 </Layout>
